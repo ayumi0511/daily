@@ -22,3 +22,43 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+# テーブル設計
+
+## Users テーブル
+
+| Column         | Type     | Options                     |
+| -------------- | -------- | ----------------------------|
+| id             | integer  | 主キー, 自動生成           |
+| first_name     | string   | null: false                 |
+| last_name      | string   | null: false                 |
+| nick_name      | string   |                            |
+
+### Association
+has_one :subscription
+has_many :orders
+
+## Subscription テーブル
+
+| Column         | Type     | Options                   |
+| ------------- | ------- | ----------------------------|
+| id            | integer | 主キー, 自動生成           |
+| standard      | boolean |                            |
+| advanced      | boolean |                            |
+| premium       | boolean |                            |
+
+
+### Association
+belongs_to :user
+
+## Order テーブル
+
+| Column         | Type     | Options                    |
+| ------------- | -------- | ----------------------------|
+| id            | integer  | 主キー, 自動生成           |
+| store         | string   |                            |
+| menu          | string   |                            |
+
+### Association
+belongs_to :user
+belongs_to :subscription
