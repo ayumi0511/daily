@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  get 'daily/index'
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  root to: 'pages#home'
+  #get 'posts/index'
+  #root to: 'daily#index'
+  get '/pages/home', to: 'pages#home'
 end
