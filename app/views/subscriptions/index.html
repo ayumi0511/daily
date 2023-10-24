@@ -2,6 +2,8 @@
 <html lang="en" data-bs-theme="auto">
   <head><script src="../assets/js/color-modes.js"></script>
 
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -164,10 +166,10 @@
       </a>
 
       <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-        <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="#">トップページ</a>
-        <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="#">店舗</a>
-        <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="#">メニュー</a>
-        <a class="py-2 link-body-emphasis text-decoration-none" href="#">価格</a>
+        <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="http://localhost:3000/daily_index#">トップページ</a>
+        <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="https://www.ubereats.com/">店舗</a>
+        <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="http://localhost:3000/orders">価格</a>
+        <a class="py-2 link-body-emphasis text-decoration-none" href="http://localhost:3000/user?paymentMethod=on">マイページ</a>
       </nav>
     </div>
 
@@ -192,7 +194,9 @@
               <li>１メニュー注文可能</li>
               <li>Help center access</li>
             </ul>
-            <button type="button" class="w-100 btn btn-lg btn-outline-primary">購入</button>
+            <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+              <a class="btn btn-lg btn-outline-primary w-100" href="http://localhost:3000/orders">購入</a>
+            </div>
           </div>
         </div>
       </div>
@@ -209,7 +213,8 @@
               <li>１メニュー注文可能</li>
               <li>Help center access</li>
             </ul>
-            <button type="button" class="w-100 btn btn-lg btn-primary">購入</button>
+            <!-- 購入ボタンをリンクに変更 -->
+           <a class="w-100 btn btn-lg btn-primary" href="http://localhost:3000/orders">購入</a>
           </div>
         </div>
       </div>
@@ -226,7 +231,8 @@
               <li>１メニュー注文可能</li>
               <li>Help center access</li>
             </ul>
-            <button type="button" class="w-100 btn btn-lg btn-primary">購入</button>
+            <!-- 購入ボタンをリンクに変更 -->
+            <a class="w-100 btn btn-lg btn-primary" href="http://localhost:3000/orders">購入</a>
           </div>
         </div>
       </div>

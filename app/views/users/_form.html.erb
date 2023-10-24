@@ -1,27 +1,27 @@
-<%= form_with(model: user) do |form| %>
-<!-- ユーザー情報の編集フォーム -->
+<%= form_with(model: user) do |f| %>
+  <!-- 共通フォームのコード -->
+  <%= render 'form', f: f %>
+
+  <!-- ユーザー情報の編集フォーム -->
   <%= f.label :first_name %>
   <%= f.text_field :first_name %>
   <%= f.label :last_name %>
   <%= f.text_field :last_name %>
   <%= f.label :nick_name %>
   <%= f.text_field :nick_name %>
-  
+
+  <!-- 保存ボタン -->
   <%= f.submit 'Update User' %>
 <% end %>
-  <% if user.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
-      <ul>
-        <% user.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+<% if user.errors.any? %>
+  <div style="color: red">
+    <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
-  <div>
-    <%= form.submit %>
+    <ul>
+      <% user.errors.each do |error| %>
+        <li><%= error.full_message %></li>
+      <% end %>
+    </ul>
   </div>
 <% end %>

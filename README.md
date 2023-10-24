@@ -29,7 +29,6 @@ Things you may want to cover:
 
 | Column         | Type     | Options                     |
 | -------------- | -------- | ----------------------------|
-| id             | integer  | 主キー, 自動生成           |
 | first_name     | string   | null: false                 |
 | last_name      | string   | null: false                 |
 | nick_name      | string   |                            |
@@ -42,7 +41,6 @@ has_many :orders
 
 | Column         | Type     | Options                   |
 | ------------- | ------- | ----------------------------|
-| id            | integer | 主キー, 自動生成           |
 | standard      | boolean |                            |
 | advanced      | boolean |                            |
 | premium       | boolean |                            |
@@ -55,7 +53,6 @@ belongs_to :user
 
 | Column         | Type     | Options                    |
 | ------------- | -------- | ----------------------------|
-| id            | integer  | 主キー, 自動生成           |
 | store         | string   |                            |
 | menu          | string   |                            |
 

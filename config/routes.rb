@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  root to: 'pages#home'
-  #get 'posts/index'
-  #root to: 'daily#index'
-  get '/pages/home', to: 'pages#home'
+  resources :users, only: [:edit, :update, :new, :create]
+  get 'user', to: 'users#index'
+  get '/daily_index', to: 'daily#index'
+  resources :subscriptions
+  resources :orders
+  resources :daily
 end
